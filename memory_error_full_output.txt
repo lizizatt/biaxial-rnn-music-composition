@@ -1,0 +1,620 @@
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.                                                                
+Loaded sabbath                                                                                                                                          
+Loaded sabrinathm                                                                                                                                       
+Loaded sayuris                                                                                                                                          
+Skipping secrets                                                                                                                                        
+Loaded seveny2                                                                                                                                          
+Loaded siriusrescue                                                                                                                                     
+Loaded smee                                                                                                                                             
+Loaded smokegetsin                                                                                                                                      
+Loaded sommry_piano                                                                                                                                     
+Loaded spiriteg                                                                                                                                         
+Loaded starwarsmain                                                                                                                                     
+Loaded stepmom                                                                                                                                          
+Loaded sugarland                                                                                                                                        
+Loaded summon                                                                                                                                           
+Loaded superman                                                                                                                                         
+Loaded supermanthemes                                                                                                                                   
+Loaded sw1end                                                                                                                                           
+Loaded sw3end                                                                                                                                           
+Loaded swcomp                                                                                                                                           
+Loaded swend                                                                                                                                            
+Skipping swing.                                                                                                                                         
+Skipping swing                                                                                                                                          
+Loaded swmain                                                                                                                                           
+C:\Python27\lib\site-packages\theano\gof\vm.py:886: UserWarning: CVM does not support memory profile, using Stack VM.                                   
+  'CVM does not support memory profile, using Stack VM.')                                                                                               
+L:\biaxial-rnn-music-composition\model.py:370: UserWarning: Updating an `OrderedUpdates` with a non-ordered dictionary with 2+ elements could make your 
+tic                                                                                                                                                     
+  self.walk_input: next_input                                                                                                                           
+L:\biaxial-rnn-music-composition\model.py:373: UserWarning: Updating an `OrderedUpdates` with a non-ordered dictionary with 2+ elements could make your 
+tic                                                                                                                                                     
+  updates.update({hidden:newstate for hidden, newstate, layer in zip(self.walk_hiddens, new_states, self.time_model.layers) if has_hidden(layer)})      
+Traceback (most recent call last):                                                                                                                      
+  File "main.py", line 54, in <module>                                                                                                                  
+    multi_training.trainPiece(m, pcs, 10000)                                                                                                            
+  File "L:\biaxial-rnn-music-composition\multi_training.py", line 57, in trainPiece                                                                     
+    error = model.update_fun(*getPieceBatch(pieces))                                                                                                    
+  File "C:\Python27\lib\site-packages\theano\compile\function_module.py", line 903, in __call__                                                         
+    self.fn() if output_subset is None else\                                                                                                            
+  File "C:\Python27\lib\site-packages\theano\gof\vm.py", line 522, in __call__                                                                          
+    storage_map=storage_map)                                                                                                                            
+  File "C:\Python27\lib\site-packages\theano\gof\link.py", line 325, in raise_with_op                                                                   
+    reraise(exc_type, exc_value, exc_trace)                                                                                                             
+  File "C:\Python27\lib\site-packages\theano\gof\vm.py", line 489, in __call__                                                                          
+    _, dt = self.run_thunk_of_node(current_apply)                                                                                                       
+  File "C:\Python27\lib\site-packages\theano\gof\vm.py", line 391, in run_thunk_of_node                                                                 
+    rval = self.thunks[idx]()                                                                                                                           
+  File "C:\Python27\lib\site-packages\theano\scan_module\scan_op.py", line 963, in rval                                                                 
+    r = p(n, [x[0] for x in i], o)                                                                                                                      
+  File "C:\Python27\lib\site-packages\theano\scan_module\scan_op.py", line 952, in p                                                                    
+    self, node)                                                                                                                                         
+  File "theano/scan_module/scan_perform.pyx", line 259, in theano.scan_module.scan_perform.perform (C:\Users\Liz\AppData\Local\Theano\compiledir_Windows
+_Family_6_Model_94_Stepping_3_GenuineIntel-2.7.6-32\scan_perform\mod.cpp:3136)                                                                          
+MemoryError:                                                                                                                                            
+Apply node that caused the error: for{cpu,scan_fn}(Subtensor{int64}.0, Subtensor{:int64:}.0, IncSubtensor{Set;:int64:}.0, IncSubtensor{Set;:int64:}.0, S
+Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_
+r_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Ele
+}.0, Elemwise{Cast{float32}}.0)                                                                                                                         
+Toposort index: 69                                                                                                                                      
+Inputs types: [TensorType(int64, scalar), TensorType(int8, 3D), TensorType(float32, 3D), TensorType(float32, 3D), TensorType(int64, scalar), TensorType(
+ensorType(float32, vector), TensorType(float32, matrix), TensorType(float32, vector), TensorType(float32, matrix), TensorType(float32, vector), TensorTy
+, TensorType(float32, vector), TensorType(float32, matrix), TensorType(float32, vector), TensorType(float32, matrix), TensorType(float32, vector), Tenso
+ix), TensorType(float32, vector), TensorType(float32, matrix), TensorType(float32, vector), TensorType(float32, matrix), TensorType(float32, matrix)]   
+Inputs shapes: [(), (127, 780, 80), (128, 780, 600), (128, 780, 600), (), (300, 380), (300,), (300, 380), (300,), (300, 380), (300,), (300, 380), (300,)
+), (300, 600), (300,), (300, 600), (300,), (300, 600), (300,), (780, 300), (780, 300)]                                                                  
+Inputs strides: [(), (62400, 80, 1), (1872000, 2400, 4), (1872000, 2400, 4), (), (1520, 4), (4,), (1520, 4), (4,), (1520, 4), (4,), (1520, 4), (4,), (24
+, 4), (4,), (2400, 4), (4,), (2400, 4), (4,), (1200, 4), (1200, 4)]                                                                                     
+Inputs values: [array(127, dtype=int64), 'not shown', 'not shown', 'not shown', array(127, dtype=int64), 'not shown', 'not shown', 'not shown', 'not sho
+not shown', 'not shown', 'not shown', 'not shown', 'not shown', 'not shown', 'not shown', 'not shown', 'not shown', 'not shown', 'not shown', 'not shown
+Inputs type_num: [9, 1, 11, 11, 9, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11]                                              
+Outputs clients: [[Shape(for{cpu,scan_fn}.0), Subtensor{::int64}(for{cpu,scan_fn}.0, Constant{-1}), Subtensor{:int64:}(for{cpu,scan_fn}.0, Constant{-1})
+can_fn}.1), Subtensor{::int64}(for{cpu,scan_fn}.1, Constant{-1}), Subtensor{:int64:}(for{cpu,scan_fn}.1, Constant{-1})], [Shape(for{cpu,scan_fn}.2), Res
+n_fn}.2, MakeVector{dtype='int64'}.0), Subtensor{::int64}(for{cpu,scan_fn}.2, Constant{-1})]]                                                           
+                                                                                                                                                        
+Backtrace when the node is created(use Theano flag traceback.limit=N to make it longer):                                                                
+  File "main.py", line 52, in <module>                                                                                                                  
+    m = model.Model([300,300],[100,50], dropout=0.5)                                                                                                    
+  File "L:\biaxial-rnn-music-composition\model.py", line 103, in __init__                                                                               
+    self.setup_train()                                                                                                                                  
+  File "L:\biaxial-rnn-music-composition\model.py", line 170, in setup_train                                                                            
+    time_result, _ = theano.scan(fn=step_time, sequences=[time_inputs], non_sequences=time_masks, outputs_info=time_outputs_info)                       
+                                                                                                                                                        
+Debugprint of the apply node:                                                                                                                           
+for{cpu,scan_fn}.0 [id A] <TensorType(float32, 3D)> ''                                                                                                  
+ |Subtensor{int64} [id B] <TensorType(int64, scalar)> ''                                                                                                
+ | |Shape [id C] <TensorType(int64, vector)> ''                                                                                                         
+ | | |Subtensor{int64::} [id D] <TensorType(int8, 3D)> ''                                                                                               
+ | |   |Reshape{3} [id E] <TensorType(int8, 3D)> ''                                                                                                     
+ | |   | |InplaceDimShuffle{1,0,2,3} [id F] <TensorType(int8, 4D)> ''                                                                                   
+ | |   | | |Subtensor{::, int64:int64:} [id G] <TensorType(int8, 4D)> ''                                                                                
+ | |   | |   |<TensorType(int8, 4D)> [id H] <TensorType(int8, 4D)>                                                                                      
+ | |   | |   |Constant{0} [id I] <int64>                                                                                                                
+ | |   | |   |Constant{-1} [id J] <int64>                                                                                                               
+ | |   | |MakeVector{dtype='int64'} [id K] <TensorType(int64, vector)> ''                                                                               
+ | |   |   |Subtensor{int64} [id L] <TensorType(int64, scalar)> ''                                                                                      
+ | |   |   | |Shape [id M] <TensorType(int64, vector)> ''                                                                                               
+ | |   |   | | |Subtensor{::, int64:int64:} [id G] <TensorType(int8, 4D)> ''                                                                            
+ | |   |   | |Constant{1} [id N] <int64>                                                                                                                
+ | |   |   |Elemwise{mul,no_inplace} [id O] <TensorType(int64, scalar)> ''                                                                              
+ | |   |   | |Subtensor{int64} [id P] <TensorType(int64, scalar)> ''                                                                                    
+ | |   |   | | |Shape [id M] <TensorType(int64, vector)> ''                                                                                             
+ | |   |   | | |Constant{0} [id I] <int64>                                                                                                              
+ | |   |   | |Subtensor{int64} [id Q] <TensorType(int64, scalar)> ''                                                                                    
+ | |   |   |   |Shape [id M] <TensorType(int64, vector)> ''                                                                                             
+ | |   |   |   |Constant{2} [id R] <int64>                                                                                                              
+ | |   |   |Subtensor{int64} [id S] <TensorType(int64, scalar)> ''                                                                                      
+ | |   |     |Shape [id M] <TensorType(int64, vector)> ''                                                                                               
+ | |   |     |Constant{3} [id T] <int64>                                                                                                                
+ | |   |Constant{0} [id I] <int64>                                                                                                                      
+ | |Constant{0} [id I] <int64>                                                                                                                          
+ |Subtensor{:int64:} [id U] <TensorType(int8, 3D)> ''                                                                                                   
+ | |Subtensor{int64::} [id D] <TensorType(int8, 3D)> ''                                                                                                 
+ | |ScalarFromTensor [id V] <int64> ''                                                                                                                  
+ |   |Subtensor{int64} [id B] <TensorType(int64, scalar)> ''                                                                                            
+ |IncSubtensor{Set;:int64:} [id W] <TensorType(float32, 3D)> ''                                                                                         
+ | |AllocEmpty{dtype='float32'} [id X] <TensorType(float32, 3D)> ''                                                                                     
+ | | |Elemwise{add,no_inplace} [id Y] <TensorType(int64, scalar)> ''                                                                                    
+ | | | |Subtensor{int64} [id B] <TensorType(int64, scalar)> ''                                                                                          
+ | | | |Subtensor{int64} [id Z] <TensorType(int64, scalar)> ''                                                                                          
+ | | |   |Shape [id BA] <TensorType(int64, vector)> ''                                                                                                  
+ | | |   | |Rebroadcast{0} [id BB] <TensorType(float32, 3D)> ''                                                                                         
+ | | |   |   |InplaceDimShuffle{x,0,1} [id BC] <TensorType(float32, (True, False, False))> ''                                                           
+ | | |   |     |Reshape{2} [id BD] <TensorType(float32, matrix)> ''                                                                                     
+ | | |   |       |Alloc [id BE] <TensorType(float32, (True, False, False))> ''                                                                          
+ | | |   |       | |InplaceDimShuffle{0,x,1} [id BF] <TensorType(float32, (True, True, False))> ''                                                      
+ | | |   |       | | |InplaceDimShuffle{x,0} [id BG] <TensorType(float32, row)> ''                                                                      
+ | | |   |       | |   |LSTM.initial_hidden_state [id BH] <TensorType(float32, vector)>                                                                 
+ | | |   |       | |Subtensor{int64} [id BI] <TensorType(int64, scalar)> ''                                                                             
+ | | |   |       | | |Shape [id BJ] <TensorType(int64, vector)> ''                                                                                      
+ | | |   |       | | | |InplaceDimShuffle{x,0} [id BG] <TensorType(float32, row)> ''                                                                    
+ | | |   |       | | |Constant{0} [id I] <int64>                                                                                                        
+ | | |   |       | |Elemwise{Cast{int32}} [id BK] <TensorType(int32, scalar)> ''                                                                        
+ | | |   |       | | |Subtensor{int64} [id BL] <TensorType(int64, scalar)> ''                                                                           
+ | | |   |       | |   |Shape [id BM] <TensorType(int64, vector)> ''                                                                                    
+ | | |   |       | |   | |Reshape{3} [id E] <TensorType(int8, 3D)> ''                                                                                   
+ | | |   |       | |   |Constant{1} [id N] <int64>                                                                                                      
+ | | |   |       | |Subtensor{int64} [id BN] <TensorType(int64, scalar)> ''                                                                             
+ | | |   |       |   |Shape [id BJ] <TensorType(int64, vector)> ''                                                                                      
+ | | |   |       |   |Constant{1} [id N] <int64>                                                                                                        
+ | | |   |       |MakeVector{dtype='int64'} [id BO] <TensorType(int64, vector)> ''                                                                      
+ | | |   |         |Elemwise{mul,no_inplace} [id BP] <TensorType(int64, scalar)> ''                                                                     
+ | | |   |         | |Subtensor{int64} [id BI] <TensorType(int64, scalar)> ''                                                                           
+ | | |   |         | |Elemwise{Cast{int32}} [id BK] <TensorType(int32, scalar)> ''                                                                      
+ | | |   |         |Subtensor{int64} [id BN] <TensorType(int64, scalar)> ''                                                                             
+ | | |   |Constant{0} [id I] <int64>                                                                                                                    
+ | | |Subtensor{int64} [id BQ] <TensorType(int64, scalar)> ''                                                                                           
+ | | | |Shape [id BA] <TensorType(int64, vector)> ''                                                                                                    
+ | | | |Constant{1} [id N] <int64>                                                                                                                      
+ | | |Subtensor{int64} [id BR] <TensorType(int64, scalar)> ''                                                                                           
+ | |   |Shape [id BA] <TensorType(int64, vector)> ''                                                                                                    
+ | |   |Constant{2} [id R] <int64>                                                                                                                      
+ | |Rebroadcast{0} [id BB] <TensorType(float32, 3D)> ''                                                                                                 
+ | |ScalarFromTensor [id BS] <int64> ''                                                                                                                 
+ |   |Subtensor{int64} [id Z] <TensorType(int64, scalar)> ''                                                                                            
+ |IncSubtensor{Set;:int64:} [id BT] <TensorType(float32, 3D)> ''                                                                                        
+ | |AllocEmpty{dtype='float32'} [id BU] <TensorType(float32, 3D)> ''                                                                                    
+ | | |Elemwise{add,no_inplace} [id BV] <TensorType(int64, scalar)> ''                                                                                   
+ | | | |Subtensor{int64} [id B] <TensorType(int64, scalar)> ''                                                                                          
+ | | | |Subtensor{int64} [id BW] <TensorType(int64, scalar)> ''                                                                                         
+ | | |   |Shape [id BX] <TensorType(int64, vector)> ''                                                                                                  
+ | | |   | |Rebroadcast{0} [id BY] <TensorType(float32, 3D)> ''                                                                                         
+ | | |   |   |InplaceDimShuffle{x,0,1} [id BZ] <TensorType(float32, (True, False, False))> ''                                                           
+ | | |   |     |Reshape{2} [id CA] <TensorType(float32, matrix)> ''                                                                                     
+ | | |   |       |Alloc [id CB] <TensorType(float32, (True, False, False))> ''                                                                          
+ | | |   |       | |InplaceDimShuffle{0,x,1} [id CC] <TensorType(float32, (True, True, False))> ''                                                      
+ | | |   |       | | |InplaceDimShuffle{x,0} [id CD] <TensorType(float32, row)> ''                                                                      
+ | | |   |       | |   |LSTM.initial_hidden_state [id CE] <TensorType(float32, vector)>                                                                 
+ | | |   |       | |Subtensor{int64} [id CF] <TensorType(int64, scalar)> ''                                                                             
+ | | |   |       | | |Shape [id CG] <TensorType(int64, vector)> ''                                                                                      
+ | | |   |       | | | |InplaceDimShuffle{x,0} [id CD] <TensorType(float32, row)> ''                                                                    
+ | | |   |       | | |Constant{0} [id I] <int64>                                                                                                        
+ | | |   |       | |Elemwise{Cast{int32}} [id BK] <TensorType(int32, scalar)> ''                                                                        
+ | | |   |       | |Subtensor{int64} [id CH] <TensorType(int64, scalar)> ''                                                                             
+ | | |   |       |   |Shape [id CG] <TensorType(int64, vector)> ''                                                                                      
+ | | |   |       |   |Constant{1} [id N] <int64>                                                                                                        
+ | | |   |       |MakeVector{dtype='int64'} [id CI] <TensorType(int64, vector)> ''                                                                      
+ | | |   |         |Elemwise{mul,no_inplace} [id CJ] <TensorType(int64, scalar)> ''                                                                     
+ | | |   |         | |Subtensor{int64} [id CF] <TensorType(int64, scalar)> ''                                                                           
+ | | |   |         | |Elemwise{Cast{int32}} [id BK] <TensorType(int32, scalar)> ''                                                                      
+ | | |   |         |Subtensor{int64} [id CH] <TensorType(int64, scalar)> ''                                                                             
+ | | |   |Constant{0} [id I] <int64>                                                                                                                    
+ | | |Subtensor{int64} [id CK] <TensorType(int64, scalar)> ''                                                                                           
+ | | | |Shape [id BX] <TensorType(int64, vector)> ''                                                                                                    
+ | | | |Constant{1} [id N] <int64>                                                                                                                      
+ | | |Subtensor{int64} [id CL] <TensorType(int64, scalar)> ''                                                                                           
+ | |   |Shape [id BX] <TensorType(int64, vector)> ''                                                                                                    
+ | |   |Constant{2} [id R] <int64>                                                                                                                      
+ | |Rebroadcast{0} [id BY] <TensorType(float32, 3D)> ''                                                                                                 
+ | |ScalarFromTensor [id CM] <int64> ''                                                                                                                 
+ |   |Subtensor{int64} [id BW] <TensorType(int64, scalar)> ''                                                                                           
+ |Subtensor{int64} [id B] <TensorType(int64, scalar)> ''                                                                                                
+ |Layer.linear_matrix [id CN] <TensorType(float32, matrix)>                                                                                             
+ |Layer.bias_matrix [id CO] <TensorType(float32, vector)>                                                                                               
+ |Layer.linear_matrix [id CP] <TensorType(float32, matrix)>                                                                                             
+ |Layer.bias_matrix [id CQ] <TensorType(float32, vector)>                                                                                               
+ |Layer.linear_matrix [id CR] <TensorType(float32, matrix)>                                                                                             
+ |Layer.bias_matrix [id CS] <TensorType(float32, vector)>                                                                                               
+ |Layer.linear_matrix [id CT] <TensorType(float32, matrix)>                                                                                             
+ |Layer.bias_matrix [id CU] <TensorType(float32, vector)>                                                                                               
+ |Layer.linear_matrix [id CV] <TensorType(float32, matrix)>                                                                                             
+ |Layer.bias_matrix [id CW] <TensorType(float32, vector)>                                                                                               
+ |Layer.linear_matrix [id CX] <TensorType(float32, matrix)>                                                                                             
+ |Layer.bias_matrix [id CY] <TensorType(float32, vector)>                                                                                               
+ |Layer.linear_matrix [id CZ] <TensorType(float32, matrix)>                                                                                             
+ |Layer.bias_matrix [id DA] <TensorType(float32, vector)>                                                                                               
+ |Layer.linear_matrix [id DB] <TensorType(float32, matrix)>                                                                                             
+ |Layer.bias_matrix [id DC] <TensorType(float32, vector)>                                                                                               
+ |Elemwise{Cast{float32}} [id DD] <TensorType(float32, matrix)> ''                                                                                      
+ | |RandomFunction{binomial}.1 [id DE] <TensorType(int64, matrix)> ''                                                                                   
+ |   |<RandomStateType> [id DF] <RandomStateType>                                                                                                       
+ |   |MakeVector{dtype='int64'} [id DG] <TensorType(int64, vector)> ''                                                                                  
+ |   | |Subtensor{int64} [id BL] <TensorType(int64, scalar)> ''                                                                                         
+ |   | |TensorConstant{300} [id DH] <TensorType(int64, scalar)>                                                                                         
+ |   |TensorConstant{1} [id DI] <TensorType(int8, scalar)>                                                                                              
+ |   |TensorConstant{0.5} [id DJ] <TensorType(float32, scalar)>                                                                                         
+ |Elemwise{Cast{float32}} [id DK] <TensorType(float32, matrix)> ''                                                                                      
+   |RandomFunction{binomial}.1 [id DL] <TensorType(int64, matrix)> ''                                                                                   
+     |<RandomStateType> [id DM] <RandomStateType>                                                                                                       
+     |MakeVector{dtype='int64'} [id DG] <TensorType(int64, vector)> ''                                                                                  
+     |TensorConstant{1} [id DI] <TensorType(int8, scalar)>                                                                                              
+     |TensorConstant{0.5} [id DJ] <TensorType(float32, scalar)>                                                                                         
+for{cpu,scan_fn}.1 [id A] <TensorType(float32, 3D)> ''                                                                                                  
+for{cpu,scan_fn}.2 [id A] <TensorType(float32, 3D)> ''                                                                                                  
+                                                                                                                                                        
+Inner graphs of the scan ops:                                                                                                                           
+                                                                                                                                                        
+for{cpu,scan_fn}.0 [id A] <TensorType(float32, 3D)> ''                                                                                                  
+ >Join [id DN] <TensorType(float32, matrix)> ''                                                                                                         
+ > |TensorConstant{1} [id DO] <TensorType(int8, scalar)>                                                                                                
+ > |Elemwise{add,no_inplace} [id DP] <TensorType(float32, matrix)> ''                                                                                   
+ > | |Elemwise{mul,no_inplace} [id DQ] <TensorType(float32, matrix)> ''                                                                                 
+ > | | |InplaceDimShuffle{1,0} [id DR] <TensorType(float32, matrix)> ''                                                                                 
+ > | | | |sigmoid [id DS] <TensorType(float32, matrix)> ''                                                                                              
+ > | | |   |Elemwise{add,no_inplace} [id DT] <TensorType(float32, matrix)> ''                                                                           
+ > | | |     |Dot22 [id DU] <TensorType(float32, matrix)> ''                                                                                            
+ > | | |     | |Layer.linear_matrix_copy [id DV] <TensorType(float32, matrix)> -> [id CN]                                                               
+ > | | |     | |InplaceDimShuffle{1,0} [id DW] <TensorType(float32, matrix)> ''                                                                         
+ > | | |     |   |Join [id DX] <TensorType(float32, matrix)> ''                                                                                         
+ > | | |     |     |TensorConstant{1} [id DO] <TensorType(int8, scalar)>                                                                                
+ > | | |     |     |<TensorType(int8, matrix)> [id DY] <TensorType(int8, matrix)> -> [id U]                                                             
+ > | | |     |     |Subtensor{::, int64::} [id DZ] <TensorType(float32, matrix)> ''                                                                     
+ > | | |     |       |<TensorType(float32, matrix)> [id EA] <TensorType(float32, matrix)> -> [id W]                                                     
+ > | | |     |       |Constant{300} [id EB] <int64>                                                                                                     
+ > | | |     |InplaceDimShuffle{0,x} [id EC] <TensorType(float32, col)> ''                                                                              
+ > | | |       |Layer.bias_matrix_copy [id ED] <TensorType(float32, vector)> -> [id CO]                                                                 
+ > | | |Subtensor{::, :int64:} [id EE] <TensorType(float32, matrix)> ''                                                                                 
+ > | |   |<TensorType(float32, matrix)> [id EA] <TensorType(float32, matrix)> -> [id W]                                                                 
+ > | |   |Constant{300} [id EB] <int64>                                                                                                                 
+ > | |Elemwise{mul,no_inplace} [id EF] <TensorType(float32, matrix)> ''                                                                                 
+ > |   |InplaceDimShuffle{1,0} [id EG] <TensorType(float32, matrix)> ''                                                                                 
+ > |   | |Elemwise{add,no_inplace} [id EH] <TensorType(float32, matrix)> ''                                                                             
+ > |   |   |Dot22 [id EI] <TensorType(float32, matrix)> ''                                                                                              
+ > |   |   | |Layer.linear_matrix_copy [id EJ] <TensorType(float32, matrix)> -> [id CP]                                                                 
+ > |   |   | |InplaceDimShuffle{1,0} [id DW] <TensorType(float32, matrix)> ''                                                                           
+ > |   |   |InplaceDimShuffle{0,x} [id EK] <TensorType(float32, col)> ''                                                                                
+ > |   |     |Layer.bias_matrix_copy [id EL] <TensorType(float32, vector)> -> [id CQ]                                                                   
+ > |   |InplaceDimShuffle{1,0} [id EM] <TensorType(float32, matrix)> ''                                                                                 
+ > |     |sigmoid [id EN] <TensorType(float32, matrix)> ''                                                                                              
+ > |       |Elemwise{add,no_inplace} [id EO] <TensorType(float32, matrix)> ''                                                                           
+ > |         |Dot22 [id EP] <TensorType(float32, matrix)> ''                                                                                            
+ > |         | |Layer.linear_matrix_copy [id EQ] <TensorType(float32, matrix)> -> [id CR]                                                               
+ > |         | |InplaceDimShuffle{1,0} [id DW] <TensorType(float32, matrix)> ''                                                                         
+ > |         |InplaceDimShuffle{0,x} [id ER] <TensorType(float32, col)> ''                                                                              
+ > |           |Layer.bias_matrix_copy [id ES] <TensorType(float32, vector)> -> [id CS]                                                                 
+ > |Elemwise{mul,no_inplace} [id ET] <TensorType(float32, matrix)> ''                                                                                   
+ >   |InplaceDimShuffle{1,0} [id EU] <TensorType(float32, matrix)> ''                                                                                   
+ >   | |sigmoid [id EV] <TensorType(float32, matrix)> ''                                                                                                
+ >   |   |Elemwise{add,no_inplace} [id EW] <TensorType(float32, matrix)> ''                                                                             
+ >   |     |Dot22 [id EX] <TensorType(float32, matrix)> ''                                                                                              
+ >   |     | |Layer.linear_matrix_copy [id EY] <TensorType(float32, matrix)> -> [id CT]                                                                 
+ >   |     | |InplaceDimShuffle{1,0} [id DW] <TensorType(float32, matrix)> ''                                                                           
+ >   |     |InplaceDimShuffle{0,x} [id EZ] <TensorType(float32, col)> ''                                                                                
+ >   |       |Layer.bias_matrix_copy [id FA] <TensorType(float32, vector)> -> [id CU]                                                                   
+ >   |Elemwise{tanh,no_inplace} [id FB] <TensorType(float32, matrix)> ''                                                                                
+ >     |Elemwise{add,no_inplace} [id DP] <TensorType(float32, matrix)> ''                                                                               
+ >Join [id FC] <TensorType(float32, matrix)> ''                                                                                                         
+ > |TensorConstant{1} [id DO] <TensorType(int8, scalar)>                                                                                                
+ > |Elemwise{add,no_inplace} [id FD] <TensorType(float32, matrix)> ''                                                                                   
+ > | |Elemwise{mul,no_inplace} [id FE] <TensorType(float32, matrix)> ''                                                                                 
+ > | | |InplaceDimShuffle{1,0} [id FF] <TensorType(float32, matrix)> ''                                                                                 
+ > | | | |sigmoid [id FG] <TensorType(float32, matrix)> ''                                                                                              
+ > | | |   |Elemwise{add,no_inplace} [id FH] <TensorType(float32, matrix)> ''                                                                           
+ > | | |     |Dot22 [id FI] <TensorType(float32, matrix)> ''                                                                                            
+ > | | |     | |Layer.linear_matrix_copy [id FJ] <TensorType(float32, matrix)> -> [id CV]                                                               
+ > | | |     | |InplaceDimShuffle{1,0} [id FK] <TensorType(float32, matrix)> ''                                                                         
+ > | | |     |   |Join [id FL] <TensorType(float32, matrix)> ''                                                                                         
+ > | | |     |     |TensorConstant{1} [id DO] <TensorType(int8, scalar)>                                                                                
+ > | | |     |     |Elemwise{mul,no_inplace} [id FM] <TensorType(float32, matrix)> ''                                                                   
+ > | | |     |     | |<TensorType(float32, matrix)> [id FN] <TensorType(float32, matrix)> -> [id DD]                                                    
+ > | | |     |     | |Subtensor{::, int64::} [id FO] <TensorType(float32, matrix)> ''                                                                   
+ > | | |     |     |   |Join [id DN] <TensorType(float32, matrix)> ''                                                                                   
+ > | | |     |     |   |Constant{300} [id EB] <int64>                                                                                                   
+ > | | |     |     |Subtensor{::, int64::} [id FP] <TensorType(float32, matrix)> ''                                                                     
+ > | | |     |       |<TensorType(float32, matrix)> [id FQ] <TensorType(float32, matrix)> -> [id BT]                                                    
+ > | | |     |       |Constant{300} [id EB] <int64>                                                                                                     
+ > | | |     |InplaceDimShuffle{0,x} [id FR] <TensorType(float32, col)> ''                                                                              
+ > | | |       |Layer.bias_matrix_copy [id FS] <TensorType(float32, vector)> -> [id CW]                                                                 
+ > | | |Subtensor{::, :int64:} [id FT] <TensorType(float32, matrix)> ''                                                                                 
+ > | |   |<TensorType(float32, matrix)> [id FQ] <TensorType(float32, matrix)> -> [id BT]                                                                
+ > | |   |Constant{300} [id EB] <int64>                                                                                                                 
+ > | |Elemwise{mul,no_inplace} [id FU] <TensorType(float32, matrix)> ''                                                                                 
+ > |   |InplaceDimShuffle{1,0} [id FV] <TensorType(float32, matrix)> ''                                                                                 
+ > |   | |Elemwise{add,no_inplace} [id FW] <TensorType(float32, matrix)> ''                                                                             
+ > |   |   |Dot22 [id FX] <TensorType(float32, matrix)> ''                                                                                              
+ > |   |   | |Layer.linear_matrix_copy [id FY] <TensorType(float32, matrix)> -> [id CX]                                                                 
+ > |   |   | |InplaceDimShuffle{1,0} [id FK] <TensorType(float32, matrix)> ''                                                                           
+ > |   |   |InplaceDimShuffle{0,x} [id FZ] <TensorType(float32, col)> ''                                                                                
+ > |   |     |Layer.bias_matrix_copy [id GA] <TensorType(float32, vector)> -> [id CY]                                                                   
+ > |   |InplaceDimShuffle{1,0} [id GB] <TensorType(float32, matrix)> ''                                                                                 
+ > |     |sigmoid [id GC] <TensorType(float32, matrix)> ''                                                                                              
+ > |       |Elemwise{add,no_inplace} [id GD] <TensorType(float32, matrix)> ''                                                                           
+ > |         |Dot22 [id GE] <TensorType(float32, matrix)> ''                                                                                            
+ > |         | |Layer.linear_matrix_copy [id GF] <TensorType(float32, matrix)> -> [id CZ]                                                               
+ > |         | |InplaceDimShuffle{1,0} [id FK] <TensorType(float32, matrix)> ''                                                                         
+ > |         |InplaceDimShuffle{0,x} [id GG] <TensorType(float32, col)> ''                                                                              
+ > |           |Layer.bias_matrix_copy [id GH] <TensorType(float32, vector)> -> [id DA]                                                                 
+ > |Elemwise{mul,no_inplace} [id GI] <TensorType(float32, matrix)> ''                                                                                   
+ >   |InplaceDimShuffle{1,0} [id GJ] <TensorType(float32, matrix)> ''                                                                                   
+ >   | |sigmoid [id GK] <TensorType(float32, matrix)> ''                                                                                                
+ >   |   |Elemwise{add,no_inplace} [id GL] <TensorType(float32, matrix)> ''                                                                             
+ >   |     |Dot22 [id GM] <TensorType(float32, matrix)> ''                                                                                              
+ >   |     | |Layer.linear_matrix_copy [id GN] <TensorType(float32, matrix)> -> [id DB]                                                                 
+ >   |     | |InplaceDimShuffle{1,0} [id FK] <TensorType(float32, matrix)> ''                                                                           
+ >   |     |InplaceDimShuffle{0,x} [id GO] <TensorType(float32, col)> ''                                                                                
+ >   |       |Layer.bias_matrix_copy [id GP] <TensorType(float32, vector)> -> [id DC]                                                                   
+ >   |Elemwise{tanh,no_inplace} [id GQ] <TensorType(float32, matrix)> ''                                                                                
+ >     |Elemwise{add,no_inplace} [id FD] <TensorType(float32, matrix)> ''                                                                               
+ >Elemwise{mul,no_inplace} [id GR] <TensorType(float32, matrix)> ''                                                                                     
+ > |<TensorType(float32, matrix)> [id GS] <TensorType(float32, matrix)> -> [id DK]                                                                      
+ > |Subtensor{::, int64::} [id GT] <TensorType(float32, matrix)> ''                                                                                     
+ >   |Join [id FC] <TensorType(float32, matrix)> ''                                                                                                     
+ >   |Constant{300} [id EB] <int64>                                                                                                                     
+                                                                                                                                                        
+for{cpu,scan_fn}.1 [id A] <TensorType(float32, 3D)> ''                                                                                                  
+ >Join [id DN] <TensorType(float32, matrix)> ''                                                                                                         
+ >Join [id FC] <TensorType(float32, matrix)> ''                                                                                                         
+ >Elemwise{mul,no_inplace} [id GR] <TensorType(float32, matrix)> ''                                                                                     
+                                                                                                                                                        
+for{cpu,scan_fn}.2 [id A] <TensorType(float32, 3D)> ''                                                                                                  
+ >Join [id DN] <TensorType(float32, matrix)> ''                                                                                                         
+ >Join [id FC] <TensorType(float32, matrix)> ''                                                                                                         
+ >Elemwise{mul,no_inplace} [id GR] <TensorType(float32, matrix)> ''                                                                                     
+                                                                                                                                                        
+Storage map footprint:                                                                                                                                  
+ - IncSubtensor{Set;:int64:}.0, Shape: (128, 780, 600), ElemSize: 4 Byte(s), TotalSize: 239616000 Byte(s)                                               
+ - IncSubtensor{Set;:int64:}.0, Shape: (128, 780, 600), ElemSize: 4 Byte(s), TotalSize: 239616000 Byte(s)                                               
+ - for{cpu,scan_fn}.0, Shape: (128, 780, 600), ElemSize: 4 Byte(s), TotalSize: 239616000 Byte(s)                                                        
+ - <TensorType(int8, 4D)>, Input, Shape: (10, 128, 78, 80), ElemSize: 1 Byte(s), TotalSize: 7987200 Byte(s)                                             
+ - Subtensor{:int64:}.0, Shape: (127, 780, 80), ElemSize: 1 Byte(s), TotalSize: 7924800 Byte(s)                                                         
+ - Elemwise{Cast{float32}}.0, Shape: (780, 300), ElemSize: 4 Byte(s), TotalSize: 936000 Byte(s)                                                         
+ - Elemwise{Cast{float32}}.0, Shape: (780, 300), ElemSize: 4 Byte(s), TotalSize: 936000 Byte(s)                                                         
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (300, 600), ElemSize: 4 Byte(s), TotalSize: 720000 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (300, 600), ElemSize: 4 Byte(s), TotalSize: 720000 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (300, 600), ElemSize: 4 Byte(s), TotalSize: 720000 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (300, 600), ElemSize: 4 Byte(s), TotalSize: 720000 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (300, 600), ElemSize: 4 Byte(s), TotalSize: 720000 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (300, 600), ElemSize: 4 Byte(s), TotalSize: 720000 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (300, 600), ElemSize: 4 Byte(s), TotalSize: 720000 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (300, 600), ElemSize: 4 Byte(s), TotalSize: 720000 Byte(s)                                       
+ - Layer.linear_matrix, Shared Input, Shape: (300, 600), ElemSize: 4 Byte(s), TotalSize: 720000 Byte(s)                                                 
+ - Layer.linear_matrix, Shared Input, Shape: (300, 600), ElemSize: 4 Byte(s), TotalSize: 720000 Byte(s)                                                 
+ - Layer.linear_matrix, Shared Input, Shape: (300, 600), ElemSize: 4 Byte(s), TotalSize: 720000 Byte(s)                                                 
+ - Layer.linear_matrix, Shared Input, Shape: (300, 600), ElemSize: 4 Byte(s), TotalSize: 720000 Byte(s)                                                 
+ - Layer.linear_matrix, Shared Input, Shape: (300, 380), ElemSize: 4 Byte(s), TotalSize: 456000 Byte(s)                                                 
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (300, 380), ElemSize: 4 Byte(s), TotalSize: 456000 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (300, 380), ElemSize: 4 Byte(s), TotalSize: 456000 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (300, 380), ElemSize: 4 Byte(s), TotalSize: 456000 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (300, 380), ElemSize: 4 Byte(s), TotalSize: 456000 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (300, 380), ElemSize: 4 Byte(s), TotalSize: 456000 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (300, 380), ElemSize: 4 Byte(s), TotalSize: 456000 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (300, 380), ElemSize: 4 Byte(s), TotalSize: 456000 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (300, 380), ElemSize: 4 Byte(s), TotalSize: 456000 Byte(s)                                       
+ - Layer.linear_matrix, Shared Input, Shape: (300, 380), ElemSize: 4 Byte(s), TotalSize: 456000 Byte(s)                                                 
+ - Layer.linear_matrix, Shared Input, Shape: (300, 380), ElemSize: 4 Byte(s), TotalSize: 456000 Byte(s)                                                 
+ - Layer.linear_matrix, Shared Input, Shape: (300, 380), ElemSize: 4 Byte(s), TotalSize: 456000 Byte(s)                                                 
+ - <TensorType(int8, 4D)>, Input, Shape: (10, 128, 78, 2), ElemSize: 1 Byte(s), TotalSize: 199680 Byte(s)                                               
+ - Reshape{3}.0, Shape: (77, 1270, 2), ElemSize: 1 Byte(s), TotalSize: 195580 Byte(s)                                                                   
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (100, 402), ElemSize: 4 Byte(s), TotalSize: 160800 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (100, 402), ElemSize: 4 Byte(s), TotalSize: 160800 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (100, 402), ElemSize: 4 Byte(s), TotalSize: 160800 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (100, 402), ElemSize: 4 Byte(s), TotalSize: 160800 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (100, 402), ElemSize: 4 Byte(s), TotalSize: 160800 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (100, 402), ElemSize: 4 Byte(s), TotalSize: 160800 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (100, 402), ElemSize: 4 Byte(s), TotalSize: 160800 Byte(s)                                       
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (100, 402), ElemSize: 4 Byte(s), TotalSize: 160800 Byte(s)                                       
+ - Layer.linear_matrix, Shared Input, Shape: (100, 402), ElemSize: 4 Byte(s), TotalSize: 160800 Byte(s)                                                 
+ - Layer.linear_matrix, Shared Input, Shape: (100, 402), ElemSize: 4 Byte(s), TotalSize: 160800 Byte(s)                                                 
+ - Layer.linear_matrix, Shared Input, Shape: (100, 402), ElemSize: 4 Byte(s), TotalSize: 160800 Byte(s)                                                 
+ - Layer.linear_matrix, Shared Input, Shape: (100, 402), ElemSize: 4 Byte(s), TotalSize: 160800 Byte(s)                                                 
+ - Layer.linear_matrix, Shared Input, Shape: (50, 150), ElemSize: 4 Byte(s), TotalSize: 30000 Byte(s)                                                   
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (50, 150), ElemSize: 4 Byte(s), TotalSize: 30000 Byte(s)                                         
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (50, 150), ElemSize: 4 Byte(s), TotalSize: 30000 Byte(s)                                         
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (50, 150), ElemSize: 4 Byte(s), TotalSize: 30000 Byte(s)                                         
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (50, 150), ElemSize: 4 Byte(s), TotalSize: 30000 Byte(s)                                         
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (50, 150), ElemSize: 4 Byte(s), TotalSize: 30000 Byte(s)                                         
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (50, 150), ElemSize: 4 Byte(s), TotalSize: 30000 Byte(s)                                         
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (50, 150), ElemSize: 4 Byte(s), TotalSize: 30000 Byte(s)                                         
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (50, 150), ElemSize: 4 Byte(s), TotalSize: 30000 Byte(s)                                         
+ - Layer.linear_matrix, Shared Input, Shape: (50, 150), ElemSize: 4 Byte(s), TotalSize: 30000 Byte(s)                                                   
+ - Layer.linear_matrix, Shared Input, Shape: (50, 150), ElemSize: 4 Byte(s), TotalSize: 30000 Byte(s)                                                   
+ - Layer.linear_matrix, Shared Input, Shape: (50, 150), ElemSize: 4 Byte(s), TotalSize: 30000 Byte(s)                                                   
+ - LSTM.initial_hidden_state, Shared Input, Shape: (600,), ElemSize: 4 Byte(s), TotalSize: 2400 Byte(s)                                                 
+ - LSTM.initial_hidden_state, Shared Input, Shape: (600,), ElemSize: 4 Byte(s), TotalSize: 2400 Byte(s)                                                 
+ - Layer.bias_matrix, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                                         
+ - <TensorType(float32, vector)>, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                             
+ - <TensorType(float32, vector)>, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                             
+ - <TensorType(float32, vector)>, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                             
+ - <TensorType(float32, vector)>, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                             
+ - <TensorType(float32, vector)>, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                             
+ - <TensorType(float32, vector)>, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                             
+ - <TensorType(float32, vector)>, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                             
+ - <TensorType(float32, vector)>, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                             
+ - <TensorType(float32, vector)>, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                             
+ - <TensorType(float32, vector)>, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                             
+ - <TensorType(float32, vector)>, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                             
+ - <TensorType(float32, vector)>, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                             
+ - <TensorType(float32, vector)>, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                             
+ - <TensorType(float32, vector)>, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                             
+ - <TensorType(float32, vector)>, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                             
+ - <TensorType(float32, vector)>, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                             
+ - Layer.bias_matrix, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                                         
+ - Layer.bias_matrix, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                                         
+ - Layer.bias_matrix, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                                         
+ - Layer.bias_matrix, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                                         
+ - Layer.bias_matrix, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                                         
+ - Layer.bias_matrix, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                                         
+ - Layer.bias_matrix, Shared Input, Shape: (300,), ElemSize: 4 Byte(s), TotalSize: 1200 Byte(s)                                                         
+ - LSTM.initial_hidden_state, Shared Input, Shape: (200,), ElemSize: 4 Byte(s), TotalSize: 800 Byte(s)                                                  
+ - Layer.linear_matrix, Shared Input, Shape: (2, 50), ElemSize: 4 Byte(s), TotalSize: 400 Byte(s)                                                       
+ - <TensorType(float32, vector)>, Shared Input, Shape: (100,), ElemSize: 4 Byte(s), TotalSize: 400 Byte(s)                                              
+ - <TensorType(float32, vector)>, Shared Input, Shape: (100,), ElemSize: 4 Byte(s), TotalSize: 400 Byte(s)                                              
+ - <TensorType(float32, vector)>, Shared Input, Shape: (100,), ElemSize: 4 Byte(s), TotalSize: 400 Byte(s)                                              
+ - <TensorType(float32, vector)>, Shared Input, Shape: (100,), ElemSize: 4 Byte(s), TotalSize: 400 Byte(s)                                              
+ - <TensorType(float32, vector)>, Shared Input, Shape: (100,), ElemSize: 4 Byte(s), TotalSize: 400 Byte(s)                                              
+ - <TensorType(float32, vector)>, Shared Input, Shape: (100,), ElemSize: 4 Byte(s), TotalSize: 400 Byte(s)                                              
+ - <TensorType(float32, vector)>, Shared Input, Shape: (100,), ElemSize: 4 Byte(s), TotalSize: 400 Byte(s)                                              
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (2, 50), ElemSize: 4 Byte(s), TotalSize: 400 Byte(s)                                             
+ - Layer.bias_matrix, Shared Input, Shape: (100,), ElemSize: 4 Byte(s), TotalSize: 400 Byte(s)                                                          
+ - <TensorType(float32, vector)>, Shared Input, Shape: (100,), ElemSize: 4 Byte(s), TotalSize: 400 Byte(s)                                              
+ - Layer.bias_matrix, Shared Input, Shape: (100,), ElemSize: 4 Byte(s), TotalSize: 400 Byte(s)                                                          
+ - <TensorType(float32, matrix)>, Shared Input, Shape: (2, 50), ElemSize: 4 Byte(s), TotalSize: 400 Byte(s)                                             
+ - LSTM.initial_hidden_state, Shared Input, Shape: (100,), ElemSize: 4 Byte(s), TotalSize: 400 Byte(s)                                                  
+ - Layer.bias_matrix, Shared Input, Shape: (100,), ElemSize: 4 Byte(s), TotalSize: 400 Byte(s)                                                          
+ - Layer.bias_matrix, Shared Input, Shape: (100,), ElemSize: 4 Byte(s), TotalSize: 400 Byte(s)                                                          
+ - <TensorType(float32, vector)>, Shared Input, Shape: (50,), ElemSize: 4 Byte(s), TotalSize: 200 Byte(s)                                               
+ - Layer.bias_matrix, Shared Input, Shape: (50,), ElemSize: 4 Byte(s), TotalSize: 200 Byte(s)                                                           
+ - <TensorType(float32, vector)>, Shared Input, Shape: (50,), ElemSize: 4 Byte(s), TotalSize: 200 Byte(s)                                               
+ - <TensorType(float32, vector)>, Shared Input, Shape: (50,), ElemSize: 4 Byte(s), TotalSize: 200 Byte(s)                                               
+ - <TensorType(float32, vector)>, Shared Input, Shape: (50,), ElemSize: 4 Byte(s), TotalSize: 200 Byte(s)                                               
+ - <TensorType(float32, vector)>, Shared Input, Shape: (50,), ElemSize: 4 Byte(s), TotalSize: 200 Byte(s)                                               
+ - <TensorType(float32, vector)>, Shared Input, Shape: (50,), ElemSize: 4 Byte(s), TotalSize: 200 Byte(s)                                               
+ - <TensorType(float32, vector)>, Shared Input, Shape: (50,), ElemSize: 4 Byte(s), TotalSize: 200 Byte(s)                                               
+ - Layer.bias_matrix, Shared Input, Shape: (50,), ElemSize: 4 Byte(s), TotalSize: 200 Byte(s)                                                           
+ - Layer.bias_matrix, Shared Input, Shape: (50,), ElemSize: 4 Byte(s), TotalSize: 200 Byte(s)                                                           
+ - Layer.bias_matrix, Shared Input, Shape: (50,), ElemSize: 4 Byte(s), TotalSize: 200 Byte(s)                                                           
+ - <TensorType(float32, vector)>, Shared Input, Shape: (50,), ElemSize: 4 Byte(s), TotalSize: 200 Byte(s)                                               
+ - TensorConstant{2}, Shape: (), ElemSize: 8 Byte(s), TotalSize: 8.0 Byte(s)                                                                            
+ - TensorConstant{50}, Shape: (), ElemSize: 8 Byte(s), TotalSize: 8.0 Byte(s)                                                                           
+ - TensorConstant{300}, Shape: (), ElemSize: 8 Byte(s), TotalSize: 8.0 Byte(s)                                                                          
+ - TensorConstant{100}, Shape: (), ElemSize: 8 Byte(s), TotalSize: 8.0 Byte(s)                                                                          
+ - <TensorType(float32, vector)>, Shared Input, Shape: (2,), ElemSize: 4 Byte(s), TotalSize: 8 Byte(s)                                                  
+ - Layer.bias_matrix, Shared Input, Shape: (2,), ElemSize: 4 Byte(s), TotalSize: 8 Byte(s)                                                              
+ - Constant{1}, Shape: (), ElemSize: 8 Byte(s), TotalSize: 8.0 Byte(s)                                                                                  
+ - Constant{-1}, Shape: (), ElemSize: 8 Byte(s), TotalSize: 8.0 Byte(s)                                                                                 
+ - Subtensor{int64}.0, Shape: (), ElemSize: 8 Byte(s), TotalSize: 8.0 Byte(s)                                                                           
+ - Subtensor{int64}.0, Shape: (), ElemSize: 8 Byte(s), TotalSize: 8.0 Byte(s)                                                                           
+ - Constant{0}, Shape: (), ElemSize: 8 Byte(s), TotalSize: 8.0 Byte(s)                                                                                  
+ - Subtensor{int64}.0, Shape: (), ElemSize: 8 Byte(s), TotalSize: 8.0 Byte(s)                                                                           
+ - Elemwise{mul,no_inplace}.0, Shape: (), ElemSize: 8 Byte(s), TotalSize: 8.0 Byte(s)                                                                   
+ - Constant{2}, Shape: (), ElemSize: 8 Byte(s), TotalSize: 8.0 Byte(s)                                                                                  
+ - Constant{3}, Shape: (), ElemSize: 8 Byte(s), TotalSize: 8.0 Byte(s)                                                                                  
+ - Subtensor{int64}.0, Shape: (), ElemSize: 8 Byte(s), TotalSize: 8.0 Byte(s)                                                                           
+ - <TensorType(float32, vector)>, Shared Input, Shape: (2,), ElemSize: 4 Byte(s), TotalSize: 8 Byte(s)                                                  
+ - TensorConstant{(1, 1, 1, ..920929e-07}, Shape: (1, 1, 1, 1), ElemSize: 4 Byte(s), TotalSize: 4 Byte(s)                                               
+ - TensorConstant{(1,) of 1e-06}, Shape: (1,), ElemSize: 4 Byte(s), TotalSize: 4 Byte(s)                                                                
+ - <TensorType(float32, scalar)>, Shared Input, Shape: (), ElemSize: 4 Byte(s), TotalSize: 4.0 Byte(s)                                                  
+ - <TensorType(float32, scalar)>, Shared Input, Shape: (), ElemSize: 4 Byte(s), TotalSize: 4.0 Byte(s)                                                  
+ - TensorConstant{(1, 1) of 1e-06}, Shape: (1, 1), ElemSize: 4 Byte(s), TotalSize: 4 Byte(s)                                                            
+ - TensorConstant{1e-06}, Shape: (), ElemSize: 4 Byte(s), TotalSize: 4.0 Byte(s)                                                                        
+ - TensorConstant{0.5}, Shape: (), ElemSize: 4 Byte(s), TotalSize: 4.0 Byte(s)                                                                          
+ - TensorConstant{1.0}, Shape: (), ElemSize: 4 Byte(s), TotalSize: 4.0 Byte(s)                                                                          
+ - TensorConstant{0.0}, Shape: (), ElemSize: 4 Byte(s), TotalSize: 4.0 Byte(s)                                                                          
+ - TensorConstant{(1, 1, 1, 1) of -1.0}, Shape: (1, 1, 1, 1), ElemSize: 4 Byte(s), TotalSize: 4 Byte(s)                                                 
+ - TensorConstant{(1, 1, 1) of 0.0}, Shape: (1, 1, 1), ElemSize: 4 Byte(s), TotalSize: 4 Byte(s)                                                        
+ - TensorConstant{(1, 1, 1, 1) of 1}, Shape: (1, 1, 1, 1), ElemSize: 1 Byte(s), TotalSize: 1 Byte(s)                                                    
+ - TensorConstant{(1,) of 2}, Shape: (1,), ElemSize: 1 Byte(s), TotalSize: 1 Byte(s)                                                                    
+ - TensorConstant{(1, 1, 1, 1) of 2}, Shape: (1, 1, 1, 1), ElemSize: 1 Byte(s), TotalSize: 1 Byte(s)                                                    
+ - Constant{2}, Shape: (), ElemSize: 1 Byte(s), TotalSize: 1.0 Byte(s)                                                                                  
+ - TensorConstant{(1, 1) of 2}, Shape: (1, 1), ElemSize: 1 Byte(s), TotalSize: 1 Byte(s)                                                                
+ - TensorConstant{0}, Shape: (), ElemSize: 1 Byte(s), TotalSize: 1.0 Byte(s)                                                                            
+ - TensorConstant{1}, Shape: (), ElemSize: 1 Byte(s), TotalSize: 1.0 Byte(s)                                                                            
+ - TensorConstant{2}, Shape: (), ElemSize: 1 Byte(s), TotalSize: 1.0 Byte(s)                                                                            
+ - TensorConstant{3}, Shape: (), ElemSize: 1 Byte(s), TotalSize: 1.0 Byte(s)                                                                            
+ TotalSize: 753472249.0 Byte(s) 0.702 GB                                                                                                                
+ TotalSize inputs: 24631829.0 Byte(s) 0.023 GB                                                                                                          
+                                                                                                                                                        
+                                                                                                                                                        
+Function profiling                                                                                                                                      
+==================                                                                                                                                      
+  Message: L:\biaxial-rnn-music-composition\model.py:230                                                                                                
+  Time in 0 calls to Function.__call__: 0.000000e+00s                                                                                                   
+  Total compile time: 1.320300e+01s                                                                                                                     
+    Number of Apply nodes: 1229                                                                                                                         
+    Theano Optimizer time: 2.226000e+00s                                                                                                                
+       Theano validate time: 2.000093e-03s                                                                                                              
+    Theano Linker time (includes C, CUDA code generation/compiling): 1.044500e+01s                                                                      
+       Import time 1.390004e-01s                                                                                                                        
+       Node make_thunk time 1.038100e+01s                                                                                                               
+           Node Alloc(TensorConstant{0.0}, Elemwise{add,no_inplace}.0, Subtensor{int64}.0, Subtensor{int64}.0) time 1.506000e+00s                       
+           Node Alloc(TensorConstant{0}, TensorConstant{1}, Subtensor{int64}.0, TensorConstant{2}) time 1.402000e+00s                                   
+           Node Alloc(InplaceDimShuffle{0,x,1}.0, Subtensor{int64}.0, Elemwise{Cast{int32}}.0, Subtensor{int64}.0) time 1.388000e+00s                   
+           Node Alloc(TensorConstant{0.0}, Elemwise{add,no_inplace}.0, Subtensor{int64}.0) time 1.353000e+00s                                           
+           Node Shape(Subtensor{::, int64:int64:}.0) time 1.271000e+00s                                                                                 
+                                                                                                                                                        
+Time in all call to theano.grad() 1.135000e+00s                                                                                                         
+Time since theano import 38.109s                                                                                                                        
+Here are tips to potentially make your code run faster                                                                                                  
+                 (if you think of new ones, suggest them on the mailing list).                                                                          
+                 Test them first, as they are not guaranteed to always provide a speedup.                                                               
+  Sorry, no tip for today.                                                                                                                              
+Function profiling                                                                                                                                      
+==================                                                                                                                                      
+  Message: L:\biaxial-rnn-music-composition\model.py:328                                                                                                
+  Time in 0 calls to Function.__call__: 0.000000e+00s                                                                                                   
+  Total compile time: 1.683000e+00s                                                                                                                     
+    Number of Apply nodes: 55                                                                                                                           
+    Theano Optimizer time: 7.300019e-02s                                                                                                                
+       Theano validate time: 9.999275e-04s                                                                                                              
+    Theano Linker time (includes C, CUDA code generation/compiling): 1.567000e+00s                                                                      
+       Import time 1.699996e-02s                                                                                                                        
+       Node make_thunk time 1.565000e+00s                                                                                                               
+           Node for{cpu,scan_fn}(<TensorType(int32, scalar)>, IncSubtensor{Set;:int64:}.0, IncSubtensor{Set;:int64:}.0, IncSubtensor{Set;:int64:}.0, Inc
+4:}.0, <RandomStateType>, <RandomStateType>, <TensorType(int32, scalar)>, <TensorType(int32, scalar)>, Layer.linear_matrix, Layer.bias_matrix, Layer.lin
+ias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix,
+ Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, LSTM.initial_hidden_state, LSTM.initial_hidden_state, Layer.linear_matr
+ix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.b
+inear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix,
+2, scalar)>) time 1.533000e+00s                                                                                                                         
+           Node AllocEmpty{dtype='int8'}(Elemwise{add,no_inplace}.0, Subtensor{int64}.0, Subtensor{int64}.0) time 2.000093e-03s                         
+           Node Elemwise{add,no_inplace}(<TensorType(int32, scalar)>, TensorConstant{1}) time 2.000093e-03s                                             
+           Node IncSubtensor{Set;:int64:}(AllocEmpty{dtype='int8'}.0, TensorConstant{(1,) of 0}, Constant{1}) time 2.000093e-03s                        
+           Node InplaceDimShuffle{x,0,1}(Reshape{2}.0) time 1.000166e-03s                                                                               
+                                                                                                                                                        
+Time in all call to theano.grad() 1.135000e+00s                                                                                                         
+Time since theano import 38.116s                                                                                                                        
+Here are tips to potentially make your code run faster                                                                                                  
+                 (if you think of new ones, suggest them on the mailing list).                                                                          
+                 Test them first, as they are not guaranteed to always provide a speedup.                                                               
+  Sorry, no tip for today.                                                                                                                              
+Here are tips to potentially make your code run faster                                                                                                  
+                 (if you think of new ones, suggest them on the mailing list).                                                                          
+                 Test them first, as they are not guaranteed to always provide a speedup.                                                               
+  Sorry, no tip for today.                                                                                                                              
+Function profiling                                                                                                                                      
+==================                                                                                                                                      
+  Message: L:\biaxial-rnn-music-composition\model.py:379                                                                                                
+  Time in 0 calls to Function.__call__: 0.000000e+00s                                                                                                   
+  Total compile time: 1.525000e+00s                                                                                                                     
+    Number of Apply nodes: 97                                                                                                                           
+    Theano Optimizer time: 4.299998e-02s                                                                                                                
+       Theano validate time: 0.000000e+00s                                                                                                              
+    Theano Linker time (includes C, CUDA code generation/compiling): 1.438000e+00s                                                                      
+       Import time 4.999876e-03s                                                                                                                        
+       Node make_thunk time 1.435000e+00s                                                                                                               
+           Node DeepCopyOp(Join.0) time 1.264000e+00s                                                                                                   
+           Node for{cpu,scan_fn}(Subtensor{int64}.0, Subtensor{:int64:}.0, IncSubtensor{Set;:int64:}.0, IncSubtensor{Set;:int64:}.0, IncSubtensor{Set;:i
+ateType>, <RandomStateType>, Subtensor{int64}.0, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, La
+yer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_ma
+matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, <TensorType(float32, scalar)>) time 1.130002e-01s                                    
+           Node DeepCopyOp(OutputFormToInputFormOp.0) time 4.999876e-03s                                                                                
+           Node InplaceDimShuffle{1,0}(sigmoid.0) time 1.999855e-03s                                                                                    
+           Node InplaceDimShuffle{1,0}(sigmoid.0) time 1.000166e-03s                                                                                    
+                                                                                                                                                        
+Time in all call to theano.grad() 1.135000e+00s                                                                                                         
+Time since theano import 38.121s                                                                                                                        
+Here are tips to potentially make your code run faster                                                                                                  
+                 (if you think of new ones, suggest them on the mailing list).                                                                          
+                 Test them first, as they are not guaranteed to always provide a speedup.                                                               
+  Sorry, no tip for today.                                                                                                                              
+Skipping empty Profile                                                                                                                                  
+Skipping empty Profile                                                                                                                                  
+Skipping empty Profile                                                                                                                                  
+Skipping empty Profile                                                                                                                                  
+Skipping empty Profile                                                                                                                                  
+Skipping empty Profile                                                                                                                                  
+Skipping empty Profile                                                                                                                                  
+Skipping empty Profile                                                                                                                                  
+Skipping empty Profile                                                                                                                                  
+Skipping empty Profile                                                                                                                                  
+Skipping empty Profile                                                                                                                                  
+Skipping empty Profile                                                                                                                                  
+Function profiling                                                                                                                                      
+==================                                                                                                                                      
+  Message: Sum of all(3) printed profiles at exit excluding Scan op profile.                                                                            
+  Time in 0 calls to Function.__call__: 0.000000e+00s                                                                                                   
+  Total compile time: 1.641100e+01s                                                                                                                     
+    Number of Apply nodes: 1229                                                                                                                         
+    Theano Optimizer time: 2.342000e+00s                                                                                                                
+       Theano validate time: 3.000021e-03s                                                                                                              
+    Theano Linker time (includes C, CUDA code generation/compiling): 1.345000e+01s                                                                      
+       Import time 1.610003e-01s                                                                                                                        
+       Node make_thunk time 1.338100e+01s                                                                                                               
+           Node for{cpu,scan_fn}(<TensorType(int32, scalar)>, IncSubtensor{Set;:int64:}.0, IncSubtensor{Set;:int64:}.0, IncSubtensor{Set;:int64:}.0, Inc
+4:}.0, <RandomStateType>, <RandomStateType>, <TensorType(int32, scalar)>, <TensorType(int32, scalar)>, Layer.linear_matrix, Layer.bias_matrix, Layer.lin
+ias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix,
+ Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, LSTM.initial_hidden_state, LSTM.initial_hidden_state, Layer.linear_matr
+ix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.b
+inear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix, Layer.linear_matrix, Layer.bias_matrix,
+2, scalar)>) time 1.533000e+00s                                                                                                                         
+           Node Alloc(TensorConstant{0.0}, Elemwise{add,no_inplace}.0, Subtensor{int64}.0, Subtensor{int64}.0) time 1.506000e+00s                       
+           Node Alloc(TensorConstant{0}, TensorConstant{1}, Subtensor{int64}.0, TensorConstant{2}) time 1.402000e+00s                                   
+           Node Alloc(InplaceDimShuffle{0,x,1}.0, Subtensor{int64}.0, Elemwise{Cast{int32}}.0, Subtensor{int64}.0) time 1.388000e+00s                   
+           Node Alloc(TensorConstant{0.0}, Elemwise{add,no_inplace}.0, Subtensor{int64}.0) time 1.353000e+00s                                           
+                                                                                                                                                        
+Time in all call to theano.grad() 1.135000e+00s                                                                                                         
+Time since theano import 38.131s                                                                                                                        
+Here are tips to potentially make your code run faster                                                                                                  
+                 (if you think of new ones, suggest them on the mailing list).                                                                          
+                 Test them first, as they are not guaranteed to always provide a speedup.                                                               
+  Sorry, no tip for today.                                                                                                                              

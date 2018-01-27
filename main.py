@@ -2,6 +2,7 @@ import pickle
 import gzip
 import numpy
 from midi_to_statematrix import *
+import theano
 
 import multi_training
 import model
@@ -39,6 +40,13 @@ def fetch_train_thoughts(m,pcs,batches,name="trainthoughts"):
 
 if __name__ == '__main__':
 
+        theano.config.exception_verbosity='high'
+        theano.config.optimizer='fast_compile'
+        theano.config.compute_test_value = 'off'
+        theano.config.profile=True
+        theano.config.profile_memory=True
+        theano.config.floatX='float32'
+
 	pcs = multi_training.loadPieces("music")
 
 	m = model.Model([300,300],[100,50], dropout=0.5)
@@ -46,3 +54,5 @@ if __name__ == '__main__':
 	multi_training.trainPiece(m, pcs, 10000)
 
 	pickle.dump( m.learned_config, open( "output/final_learned_config.p", "wb" ) )
+
+        quit()
