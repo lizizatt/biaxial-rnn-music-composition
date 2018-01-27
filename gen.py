@@ -29,20 +29,11 @@ def gen_adaptive(m,pcs,times,keep_thoughts=False,name="final"):
 	if keep_thoughts:
 		pickle.dump(all_thoughts, open('output/'+name+'.p','wb'))
 
-def fetch_train_thoughts(m,pcs,batches,name="trainthoughts"):
-	all_thoughts = []
-	for i in range(batches):
-		ipt, opt = multi_training.getPieceBatch(pcs)
-		thoughts = m.update_thought_fun(ipt,opt)
-		all_thoughts.append((ipt,opt,thoughts))
-	pickle.dump(all_thoughts, open('output/'+name+'.p','wb'))
-
 if __name__ == '__main__':
 
-	pcs = multi_training.loadPieces("music")
-
 	m = model.Model([300,300],[100,50], dropout=0.5)
+	m.learned_config = pickle.load(open("output/final_learned_config.p", 'rb'))
+	pcs = multi_training.loadPieces("music")
+	gen_adaptive(m, pcs, 10, name="composition")
 
-	multi_training.trainPiece(m, pcs, 10000)
-
-	pickle.dump( m.learned_config, open( "output/final_learned_config.p", "wb" ) )
+	quit()

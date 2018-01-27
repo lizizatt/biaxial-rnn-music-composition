@@ -1,7 +1,7 @@
 import os, random
 from midi_to_statematrix import *
 from data import *
-import cPickle as pickle
+import pickle
 
 import signal
 
@@ -19,7 +19,11 @@ def loadPieces(dirpath):
 
         name = fname[:-4]
 
-        outMatrix = midiToNoteStateMatrix(os.path.join(dirpath, fname))
+        try:
+            outMatrix = midiToNoteStateMatrix(os.path.join(dirpath, fname))
+        except TypeError:
+            print "Skipping {}".format(name)
+            continue
         if len(outMatrix) < batch_len:
             continue
 
